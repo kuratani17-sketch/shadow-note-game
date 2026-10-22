@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: shadow-note-duel-mobile
+    runtime: node
+    plan: free
+    buildCommand: echo "No dependencies to install"
+    startCommand: node app.mjs
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
